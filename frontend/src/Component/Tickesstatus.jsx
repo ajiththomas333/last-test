@@ -8,13 +8,13 @@ function Tickesstatus() {
   const [user, setUser] = useState([]);
 
   // Initialize socket.io connection to the backend
-  const socket = io("http://localhost:5000");
+  const socket = io("https://last-web-hqhaekgufshuh5as.southindia-01.azurewebsites.net");
 
 
   // Function to fetch all complaints from the server
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/user");
+      const response = await axios.get("https://last-web-hqhaekgufshuh5as.southindia-01.azurewebsites.net/api/user");
       console.log("API response:", response.data.complaint);
       setUser(response.data.complaint)
     } catch (error) {
@@ -34,7 +34,7 @@ function Tickesstatus() {
   // Function to delete a specific complaint by ID
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/delete/${id}`);
+    await axios.delete(`https://last-web-hqhaekgufshuh5as.southindia-01.azurewebsites.net/api/delete/${id}`);
     // Remove deleted ticket from the current state (UI updates instantly without reload)
     setUser((prev) => prev.filter((u) => u._id !== id))
   };
