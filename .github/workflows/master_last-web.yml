@@ -52,7 +52,8 @@ jobs:
         with:
           app-name: 'last-web'
           slot-name: 'Production'
-          package: .
+          package: backend
 
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3AB43CA47BA54D958E3860E1F9C3FEC2 }}
+
 
