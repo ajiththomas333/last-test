@@ -12,7 +12,7 @@ function Admin() {
 
   // Function to fetch all complaints from the server (API call)
   const fetchComplaints = async () => {
-    const res = await axios.get("http://localhost:5000/api/admins");
+    const res = await axios.get("https://last-web-hqhaekgufshuh5as.southindia-01.azurewebsites.net/api/admins");
     setComplaints(res.data);
   };
 
@@ -28,7 +28,7 @@ function Admin() {
 
   // Function to update complaint status (e.g., Start or Resolve)
   const updateStatus = async (id, status) => {
-    await axios.put(`http://localhost:5000/api/update/${id}`, { status });
+    await axios.put(`https://last-web-hqhaekgufshuh5as.southindia-01.azurewebsites.net/api/update/${id}`, { status });
   }
 
 
