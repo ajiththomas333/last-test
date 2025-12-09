@@ -8,7 +8,7 @@ function Admin() {
   const [complaints, setComplaints] = useState([])
 
   // Initialize Socket.io client connection
-  const socket = io("http://localhost:5000");
+  const socket = io("https://last-web-hqhaekgufshuh5as.southindia-01.azurewebsites.net");
 
   // Function to fetch all complaints from the server (API call)
   const fetchComplaints = async () => {
