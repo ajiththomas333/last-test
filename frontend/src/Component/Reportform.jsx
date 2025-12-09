@@ -18,7 +18,7 @@ function Reportform() {
     alert("Your ticket has been submitted successfully!");
 
     // Send POST request to backend API with complaint data
-    axios.post("http://localhost:5000/api/complaints", {
+    axios.post("https://last-web-hqhaekgufshuh5as.southindia-01.azurewebsites.net/api/complaints", {
 
       user: {
         name: name,
